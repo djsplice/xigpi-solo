@@ -1,0 +1,9 @@
+{
+  "run_list": [
+    "recipe[monit-ng::default]",
+	  "recipe[xigpi::default]"
+  ],
+  "automatic": {
+    "ipaddress": "192.168.1.72"
+  }
+}

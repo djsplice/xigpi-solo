@@ -1,0 +1,5 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook 'monit-ng', git: 'https://github.com/djsplice/monit-ng.git'

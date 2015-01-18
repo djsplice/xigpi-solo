@@ -1,0 +1,6 @@
+{
+  "run_list": [ "recipe[apt::default]", "recipe[xigpi::default]" ],
+  "automatic": {
+    "ipaddress": "192.168.1.72"
+  }
+}

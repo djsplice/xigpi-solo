@@ -1,0 +1,46 @@
+## Managed by Chef -
+## Any changes will be discarded on next chef-client run!
+"""\
+XIG Configuration File
+
+Modify the contents of the below XigConfig object in order to
+change the configuration of the Xig.  Each option is
+commented as to what it does.
+"""
+
+class XigConfig(object):
+
+## Session Types
+  session_types = [
+    "http",               # HTTP (fetch web pages)
+    "idigi_rci",          # iDigi RCI (send data from iDigi to an XBee)
+    "io_sample",          # XBee I/O Samples to HTTP
+  ]
+
+## iDigi Data
+  idigi_data_max_rate_sec = 30    # maximum upload rate to iDigi in seconds
+  idigi_data_max_q_len = 512      # maximum number of samples to save before uploading
+  idigi_data_no_errors = False    # maximum number of samples to save before uploading
+
+## XBee I/O Sample HTTP Indications
+  io_sample_destination_url = "http://192.168.1.69/collect"
+
+## Global Configuration Variables
+  # Should we send the helpfile for all unknown commands
+  global_always_send_help = False
+
+  # The maximum length of a URL or XIG command
+  global_max_buf_size = 256
+
+  # Controls how many sessions are allowed to queue up for a single XBee destination.
+  global_max_dest_session_q_len = 8
+
+  # How often (in seconds) to call the garbage collector:
+  global_gc_interval = 60
+
+  # Log-levels for various sub systems:
+  log_level_global = "info"
+  log_level_io_kernel = "debug"
+
+  # Controls which UDP port number to receive requests
+  xbee_udp_port = 5649
